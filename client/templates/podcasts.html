@@ -1,0 +1,9 @@
+
+<template name="podcasts">
+  <h2>Podcasts</h2>
+  <ul>
+    {{#each podcast in podcasts}}
+      <li><a href="{{podcast.url}}" target="_blank">{{podcast.title}}</a></li>
+    {{/each}}
+  </ul>
+</template>
