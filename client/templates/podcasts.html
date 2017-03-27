@@ -1,9 +1,14 @@
 
 <template name="podcasts">
   <h2>Podcasts</h2>
+  {{> Template.dynamic template="addEditPodcast" data=editing}}
   <ul>
-    {{#each podcast in podcasts}}
-      <li><a href="{{podcast.url}}" target="_blank">{{podcast.title}}</a></li>
+    {{#each podcasts}}
+      <li>
+        <a href="{{url}}" target="_blank">{{title}}</a>
+        <button class="edit">Edit</button>
+        <button class="remove">Remove</button>
+      </li>
     {{/each}}
   </ul>
 </template>
